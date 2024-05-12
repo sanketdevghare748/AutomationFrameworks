@@ -13,11 +13,12 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Base {
 //This is a comment added from master branch.
+//This is my base class,comment added from developement branch.
 	public WebDriver driver;
 	public Properties prop;
 
 	public WebDriver initializeDriver() throws IOException {
-//This is my base class,comment added from developement branch.
+
 		prop = loadConfig();
 		String browserName = prop.getProperty("browser");
 
