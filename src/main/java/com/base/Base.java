@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class Base {
-
+//This is a comment added from master branch.
 	public WebDriver driver;
 	public Properties prop;
 
