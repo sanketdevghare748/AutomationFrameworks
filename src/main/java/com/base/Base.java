@@ -17,13 +17,12 @@ public class Base {
 	public Properties prop;
 
 	public WebDriver initializeDriver() throws IOException {
-
+//This is my base class,comment added from developement branch.
 		prop = loadConfig();
 		String browserName = prop.getProperty("browser");
 
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "/src/main/resources/chromedriver");
+					System.setProperty("webdriver.chrome.driver", "C:\\Users\\SDE47\\Desktop\\Automation\\Ecclipse\\chromedriver-win64\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browserName.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver",

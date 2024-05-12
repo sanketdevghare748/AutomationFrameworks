@@ -1,0 +1,10 @@
+13:38:26.072 [TestNG-tests-2] INFO  com.cases.ValidateFooter - Driver is initialized.
+13:38:26.119 [TestNG-tests-3] INFO  com.cases.ValidateTitle - Driver is initialized.
+13:38:26.264 [TestNG-tests-4] INFO  com.cases.BookAppointment - Driver is initialized.
+13:38:26.567 [TestNG-tests-1] INFO  com.cases.Login - Driver is initialized.
+13:38:32.030 [TestNG-tests-2] INFO  com.cases.ValidateFooter - Footer is displayed
+13:38:32.148 [TestNG-tests-2] INFO  com.cases.ValidateFooter - Driver is closed
+13:38:33.469 [TestNG-tests-3] INFO  com.cases.ValidateTitle - Driver is closed
+13:38:34.154 [TestNG-tests-1] INFO  com.cases.Login - Successfully Logged In
+13:38:34.268 [TestNG-tests-1] INFO  com.cases.Login - Driver is closed
+13:38:34.607 [TestNG-tests-4] INFO  com.cases.BookAppointment - Driver is closed
