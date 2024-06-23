@@ -4,17 +4,6 @@
   <listeners>
     <listener class-name="com.listeners.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="ValidateFooter(failed)">
-    <classes>
-      <class name="com.cases.ValidateFooter">
-        <methods>
-          <include name="teardown"/>
-          <include name="initialize"/>
-          <include name="checkFooter"/>
-        </methods>
-      </class> <!-- com.cases.ValidateFooter -->
-    </classes>
-  </test> <!-- ValidateFooter(failed) -->
   <test thread-count="5" parallel="tests" name="Login(failed)">
     <classes>
       <class name="com.cases.Login">

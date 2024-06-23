@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -26,6 +27,7 @@ public class BookAppointment extends Base {
 	
 	public WebDriver driver;
 	public Actions actions;
+
 	
 	private Logger log = LogManager.getLogger(BookAppointment.class.getName());
 	private HashMap<String, String> data;
@@ -37,12 +39,12 @@ public class BookAppointment extends Base {
 		log.info("Driver is initialized.");
 		data = new Utils().getTestData("TC2");
 		actions = new Actions(driver);
+		HomePage hp;
 			
 	}
 
 	@Test
 	public void bookAppointment() {
-		
 		HomePage hp = new HomePage(driver);
 		LoginPage lp = new LoginPage(driver);
 		BookAppointmentPage ba = new BookAppointmentPage(driver);
@@ -64,6 +66,17 @@ public class BookAppointment extends Base {
 		
 		Assert.assertTrue(ac.getTitle().isDisplayed());
 
+	}
+	@Test(dependsOnMethods = "bookAppointment")
+	public void validateHistory()
+	{
+		HomePage hp = new HomePage(driver);
+		actions.click(hp.getMenuBtn());
+		actions.click(hp.getHistory());
+		String facility= driver.findElement(By.cssSelector("#facility")).getText();
+		Assert.assertEquals(facility, "Hongkong CURA Healthcare Center");
+		String AppointmentDate=driver.findElement(By.className("panel-heading")).getText();
+		Assert.assertEquals(AppointmentDate,"08/08/20");
 	}
 
 

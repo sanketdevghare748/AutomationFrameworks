@@ -17,6 +17,7 @@ public class HomePage {
 	private By login = By.cssSelector("a[href*='login']");
 	private By title = By.cssSelector("h1");
 	private By footer = By.cssSelector("footer");
+	private By history=By.cssSelector("a[href*='history']");
 	
 	
 	// All methods should be defined here
@@ -35,5 +36,9 @@ public class HomePage {
 	public WebElement getFooter() {
 		return driver.findElement(footer);
 	}
+	public WebElement getHistory() {
+		return driver.findElement(history);
+	}
+	
 
 }
